@@ -28,6 +28,7 @@ export default function Home() {
   const [labels, setLabels] = useState<string[]>([]);
   const [data, setData] = useState<number[]>([]);
   const [loading, setLoading] = useState(false);
+  const API= "https://jarnox-backend-b1oe.onrender.com";
 
   // Info Cards
   const [overview, setOverview] = useState<Overview | null>(null);
@@ -43,7 +44,7 @@ export default function Home() {
 
   // Fetch companies
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/companies")
+    fetch(`${API}/companies`)
       .then((res) => res.json())
       .then((list) => setCompanies(list))
       .catch((err) => console.error("Error fetching companies:", err));
@@ -55,7 +56,7 @@ export default function Home() {
     setLoading(true);
 
     // Stock Data
-    fetch(`http://127.0.0.1:8000/stocks/${selected}`)
+    fetch(`${API}/stocks/${selected}`)
       .then((res) => res.json())
       .then((points: StockPoint[]) => {
         setLabels(points.map((p) => p.date));
@@ -90,7 +91,7 @@ export default function Home() {
 
     // News
     setNewsLoading(true);
-    fetch(`http://127.0.0.1:8000/news/${selected}`)
+    fetch(`${API}/news/${selected}`)
       .then((res) => res.json())
       .then((items: NewsItem[]) => setNews(items))
       .catch(() => {
