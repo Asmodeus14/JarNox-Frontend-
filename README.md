@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Stock Dashboard Frontend
 
-## Getting Started
+This is a cyber-gothic stock dashboard frontend built with Next.js and React. It provides a sleek, dark-themed interface to visualize stock data, track market movers, and read the latest news for selected companies. The dashboard is fully responsive and includes dynamic animations for an immersive, futuristic experience.
 
-First, run the development server:
+Features
 
-```bash
+Company Sidebar: Select companies from a modern animated sidebar.
+
+Interactive Stock Charts: View historical stock prices using interactive charts.
+
+Info Cards: Overview, sentiment analysis, and top movers.
+
+News Panel: Latest news articles with offline fallback.
+
+Dynamic Animations: Glowing UI, moving backgrounds, blinking cursors, and more.
+
+Dark Cyber-Gothic Aesthetic: Full black theme with neon accents for a modern feel.
+
+Tech Stack
+
+Frontend: Next.js 13 (App Router) & React
+
+Styling: Tailwind CSS & custom animations
+
+Charts: Chart.js (via custom PriceChart component)
+
+API Integration: Fetches stock data, news, and company info from backend endpoints
+
+Usage
+
+Clone the repo:
+
+git clone <your-repo-url>
+
+
+Install dependencies:
+
+npm install
+
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open http://localhost:3000 to view the dashboard.
